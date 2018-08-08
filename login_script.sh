@@ -1,3 +1,6 @@
+file=$(PWD)/credentials.txt
+username=ldap
+password=password
 while [ 1 ]
 do
 	if wget -q --spider www.bluespark.co.nz; then
@@ -7,7 +10,7 @@ do
 		echo "Current time : $now"
 		echo "Not Connected!"
 		URL=`curl -Ls -o /dev/null -w %{url_effective} http://rediffmail.com`
-		curl -L -u <ldap>:<password> $URL
+		curl -L -u $username:$password $URL
 	fi
 	sleep 5
 done
