@@ -1,1 +1,1 @@
-nohup login_script.sh &
+nohup ./login_script.sh &
